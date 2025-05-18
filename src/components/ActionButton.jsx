@@ -1,4 +1,3 @@
-// components/ActionButton.jsx
 import React from 'react';
 
 const ActionButton = ({ onClick, label, loadingLabel, isLoading, bgColor, disabled }) => {

@@ -1,4 +1,3 @@
-// utils/boilerplates.js
 export const boilerplateCode = {
   javascript: `// JavaScript Example
 function main() {
