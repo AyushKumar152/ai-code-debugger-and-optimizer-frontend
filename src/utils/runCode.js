@@ -1,9 +1,10 @@
 import axios from 'axios';
 
-const BASE_URL = 'http://127.0.0.1:5000';
+const backendUrl = "https://ai-code-debugger-and-optimizer-backend.onrender.com";
+
 
 export const runCode = async (sourceCode, languageId) => {
-  const response = await axios.post(`${BASE_URL}/run`, {
+  const response = await axios.post(`${backendUrl}/run`, {
     source_code: sourceCode,
     language_id: languageId,
   });
@@ -11,7 +12,7 @@ export const runCode = async (sourceCode, languageId) => {
 };
 
 export const debugCode = async (code, language) => {
-  const response = await axios.post(`${BASE_URL}/debug`, {
+  const response = await axios.post(`${backendUrl}/debug`, {
     code,
     language,
   });
@@ -19,7 +20,7 @@ export const debugCode = async (code, language) => {
 };
 
 export const optimizeCode = async (code, language) => {
-  const response = await axios.post(`${BASE_URL}/optimize`, {
+  const response = await axios.post(`${backendUrl}/optimize`, {
     code,
     language,
   });
